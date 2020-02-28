@@ -33,7 +33,7 @@ public class Main{
         frame.setVisible(true);
         
         while (true) {    
-            Thread.sleep(300);
+            Thread.sleep(Math.abs(500-(game.score)));
             game.drawSnake();
             game.repaint();
         }
@@ -120,7 +120,7 @@ class Snake extends JPanel implements KeyListener{
         if(fruit.x == snake.get(0).x && fruit.y == snake.get(0).y){
             placeFruit();
             score += 10;
-            snake.add(new Point(snake.get(snake.size()-1).x+1, snake.get(snake.size()-1).y+1));
+            snake.add(new Point(-40, -40));
         }
     }
     
