@@ -28,6 +28,7 @@ public class Main{
         Snake game = new Snake();
         frame.add(game);
         frame.setSize(480, 360);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setUndecorated(true);
         frame.setResizable(false);
         frame.setVisible(true);
@@ -36,6 +37,7 @@ public class Main{
             Thread.sleep(Math.abs(500-(game.score)));
             game.drawSnake();
             game.repaint();
+            System.out.println(Math.abs(500-(game.score)));
         }
     }
 }
